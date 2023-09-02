@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-text-color: #183b56;
+  --secondary-text-color: #577592;
+  --accent-color: #2294ed;
+  --accent-color-dark: #1d69a3;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-text-color);
+  background-color: #252d36;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  color: var(--secondary-text-color);
+  line-height: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 95%;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+nav {
+  background-color: #f3faff;
+  box-shadow: 0 0 4px #bbd0e2;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.main-nav {
+  justify-content: space-between;
+  padding-block: 0.5rem;
+}
+
+.company-name {
+  width: 7rem;
+}
+
+.nav-links ul {
+  gap: 1rem;
+}
+
+.hover-link {
+  cursor: pointer;
+}
+
+.hover-link:hover {
+  color: var(--secondary-text-color);
+}
+
+.hover-link:active {
+  color: red;
+}
+
+.search-bar {
+  height: 2rem;
+  gap: 0.5rem;
+}
+
+.news-input {
+  width: 8rem;
+  height: 100%;
+  padding-inline: 1.3rem;
+  border: 2px solid #bbd0e2;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+}
+
+.search-btn {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+.search-bar:hover {
+  background-color: var(--accent-color-dark);
+}
+
+/* main */
+
+main {
+  padding-bottom: 1.5rem;
+  margin-top: 4rem;
+}
+
+.cards-container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  align-items: start;
+}
+
+.card {
+  margin:0.7rem;
+  width: 22rem;
+  min-height: 27.5rem;
+  box-shadow: 0 0 4px #dfecff;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fff;
+  overflow: hidden;
+  transition: all 3s ease;
+  scale: 1;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 8px #dfecff;
+  background-color: #f9fdff;
+  scale: 1.05;
+  transition: 0.3s;
+
+}
+
+.card-header img {
+  width: 100%;
+  height: 12rem;
+}
+
+.card-content {
+  padding: 12px;
+}
+
+.news-source {
+  margin-block: 12px;
+}
