@@ -50,6 +50,7 @@ nav {
   right: 0;
   left: 0;
   z-index: 99;
+  position: fixed;
 }
 
 .main-nav {
@@ -109,7 +110,7 @@ nav {
 
 main {
   padding-bottom: 1.5rem;
-  margin-top: 4rem;
+  margin-top: 5rem;
 }
 
 .cards-container {
