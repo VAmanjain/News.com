@@ -12,3 +12,15 @@ News.com is a dynamic news website dedicated to keeping you informed about curre
 
 ## Demo
 https://news-com.netlify.app/
+
+## Tech Stack
+
+**Client:** HTML5, CSS , JS
+
+**Server:** Netlify
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at vaman.jain17@gmail.com
+
