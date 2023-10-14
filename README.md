@@ -17,7 +17,7 @@ https://news-com.netlify.app/
 
 **Client:** HTML5, CSS , JS
 
-**Server:** gnews API, Netlify
+**Server:** Gnews API, Netlify
 
 
 ## Feedback
