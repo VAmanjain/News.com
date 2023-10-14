@@ -3,7 +3,7 @@
 const GNEWS_API_KEY = "5e03d15119b619681f013f719b916b30";
 const gnewsApiUrl = "https://gnews.io/api/v4/search";
 
-window.addEventListener("load", () => fetchNews("India"));
+window.addEventListener("load", () => fetchNews("Globe"));
 
 function reload() {
   window.location.reload();
@@ -47,6 +47,7 @@ function fillDataInCard(cardClone, article) {
   const newsTitle = cardClone.querySelector("#news-title");
   const newsSource = cardClone.querySelector("#news-source");
   const newsDesc = cardClone.querySelector("#news-desc");
+  const newsMore = cardClone.querySelector("#button-read")
 
   newsImg.src = article.image || 'http://via.placeholder.com/400x200'; //USE IMAGE WHEN AVAILABLE OR USE PLACEHOLDER
 
@@ -54,7 +55,7 @@ function fillDataInCard(cardClone, article) {
   newsDesc.textContent = article.description || "No description available";
   newsSource.textContent = article.source || "Unknown source";
 
-  cardClone.firstElementChild.addEventListener("click", () => {
+  newsMore.addEventListener("click", () => {
     if (article.url) {
       window.open(article.url, "_blank");
     }

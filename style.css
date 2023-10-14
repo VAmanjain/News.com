@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
 
 * {
   margin: 0;
@@ -15,7 +16,10 @@
 body {
   font-family: "Poppins", sans-serif;
   color: var(--primary-text-color);
-  background-color:#012a4a;
+  background-color:#1d2225;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 p {
@@ -26,6 +30,7 @@ p {
 
 a {
   text-decoration: none;
+  color: #dfecff;
 }
 
 ul {
@@ -44,8 +49,8 @@ ul {
 }
 
 nav {
-  background-color: #f3faff;
-  box-shadow: 0 0 4px #bbd0e2;
+  background-color: #f2f5f5;
+  box-shadow: 0 0 4px #ffffff;
   top: 0;
   right: 0;
   left: 0;
@@ -53,13 +58,24 @@ nav {
   position: fixed;
 }
 
+h1{
+  word-spacing:4px;
+  font-size: 1.7rem;
+  text-align: center;
+  background-color: #012a4a;
+  padding: 0.7rem;
+  font-family: 'Heebo', sans-serif;
+}
 .main-nav {
   justify-content: space-between;
   padding-block: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .company-name {
   width: 7rem;
+  letter-spacing: 2px;
 }
 
 .nav-links ul {
@@ -83,28 +99,92 @@ nav {
   gap: 0.5rem;
 }
 
-.news-input {
-  width: 8rem;
-  height: 100%;
-  padding-inline: 1.3rem;
-  border: 2px solid #bbd0e2;
-  border-radius: 4px;
-  font-family: "Roboto", sans-serif;
+/* Search bar */
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding-right: 1.5rem;
+  
 }
 
-.search-btn {
-  background-color: var(--accent-color);
-  color: white;
-  padding: 0.5rem 1.5rem;
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #f4f2f2;
+  border: 1px solid #012a4a34;
+  color: #646464;
+  padding: 0.5rem 0.8rem;
+  border-radius: 30px;
+  width: 13rem;
+  transition: all ease-in-out .5s;
+  margin-right: -2.5rem;
+}
+
+.search__input:hover, .search__input:focus {
+  box-shadow: 0 0 1em #00000013;
+}
+
+.search__input:focus {
+  outline: none;
+  background-color: #f0eeee;
+}
+
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: #ccc;
+}
+
+.search__input:focus + .search__button {
+  background-color: #f0eeee;
+}
+
+.search__button {
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: "Roboto", sans-serif;
+  background-color: #f4f2f2;
+  margin-top: .1em;
 }
 
-.search-bar:hover {
-  background-color: var(--accent-color-dark);
+.search__button:hover {
+  cursor: pointer;
 }
+
+.search__icon {
+  height: 1.3em;
+  width: 1.3em;
+  
+  fill: #b4b4b4;
+}
+
+/* Buuton */
+
+#button-read {
+  color: #fffffff5;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 0;
+  background-color:#012a4a;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  transition: all .5s ease;
+ }
+ 
+ #button-read:hover {
+  background-color: hsl(210, 94%, 25%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: hsl(210, 94%, 25%) 0px 5px 13px 0px;
+ }
+ 
+ #button-read:active {
+  background-color: hsl(235, 80%, 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(50, 24, 220) 0px 0px 0px 0px;
+  transition: 100ms;
+ }
+
+
 
 /* main */
 
@@ -118,14 +198,16 @@ main {
   flex-wrap: wrap;
   row-gap: 20px;
   align-items: start;
+  margin-top: 6rem;
 }
 
 .card {
   margin:0.7rem;
-  width: 22rem;
-  min-height: 27.5rem;
-  box-shadow: 0 0 4px #dfecff;
-  border-radius: 4px;
+
+  width: 20rem;
+  min-height: 25rem;
+  box-shadow: 0 0 1px #dfecff;
+  border-radius: 12px;
   cursor: pointer;
   background-color: #fff;
   overflow: hidden;
@@ -134,22 +216,32 @@ main {
 }
 
 .card:hover {
-  box-shadow: 1px 1px 8px #dfecff;
+  box-shadow: 1px 1px 1px #dfecff;
   background-color: #f9fdff;
   scale: 1.05;
-  transition: 0.3s;
+  transition: 0.5s;
 
 }
 
 .card-header img {
+  padding: 2px;
+  border-radius: 14px;
   width: 100%;
-  height: 12rem;
+  height: 10rem;
+  object-fit:cover;
 }
 
 .card-content {
   padding: 12px;
 }
-
+#news-title{
+  font-size: 1.2rem;
+}
 .news-source {
-  margin-block: 12px;
+  margin-block: 10px;
+}
+
+.news-desc{
+  font-size: 0.8rem;
+  min-height: 8rem;
 }
