@@ -53,7 +53,7 @@ function fillDataInCard(cardClone, article) {
 
   newsTitle.textContent = article.title || "N/A";
   newsDesc.textContent = article.description || "No description available";
-  newsSource.textContent = article.source || "Unknown source";
+  newsSource.textContent = article.source.name  || "Unknown source";
 
   newsMore.addEventListener("click", () => {
     if (article.url) {
