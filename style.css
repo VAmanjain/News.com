@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap");
 
 * {
   margin: 0;
@@ -16,7 +16,7 @@
 body {
   font-family: "Poppins", sans-serif;
   color: var(--primary-text-color);
-  background-color:#1d2225;
+  background-color: #1d2225;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,13 +59,13 @@ nav {
   position: fixed;
 }
 
-h1{
-  word-spacing:4px;
+h1 {
+  word-spacing: 4px;
   font-size: 1.7rem;
   text-align: center;
   background-color: #012a4a;
   padding: 0.7rem;
-  font-family: 'Heebo', sans-serif;
+  font-family: "Heebo", sans-serif;
 }
 .main-nav {
   justify-content: space-between;
@@ -108,7 +108,6 @@ h1{
   text-align: center;
   padding-right: 1.5rem;
   width: 13rem;
-  
 }
 
 .search__input {
@@ -119,12 +118,15 @@ h1{
   color: #646464;
   padding: 0.5rem 0.8rem;
   border-radius: 30px;
-width: inherit;
-  transition: all ease-in-out .5s;
+  width: 100%;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  transition: all ease-in-out 0.5s;
   margin-right: -2.5rem;
 }
 
-.search__input:hover, .search__input:focus {
+.search__input:hover,
+.search__input:focus {
   box-shadow: 0 0 1em #00000013;
 }
 
@@ -135,7 +137,7 @@ width: inherit;
 
 .search__input::-webkit-input-placeholder {
   font-weight: 100;
-  color: #ccc;
+  color: #161515;
 }
 
 .search__input:focus + .search__button {
@@ -145,7 +147,7 @@ width: inherit;
 .search__button {
   border: none;
   background-color: #f4f2f2;
-  margin-top: .1em;
+  margin-top: 0.1em;
 }
 
 .search__button:hover {
@@ -155,8 +157,8 @@ width: inherit;
 .search__icon {
   height: 1.3em;
   width: 1.3em;
-  
-  fill: #b4b4b4;
+
+  fill: #1a1919;
 }
 
 /* Buuton */
@@ -166,30 +168,28 @@ width: inherit;
   padding: 12px 20px;
   border-radius: 12px;
   border: 0;
-  background-color:#012a4a;
+  background-color: #012a4a;
   box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
   letter-spacing: 1.5px;
   font-size: 1rem;
-  transition: all .5s ease;
- }
- 
- #button-read:hover {
+  transition: all 0.5s ease;
+}
+
+#button-read:hover {
   background-color: hsl(210, 94%, 25%);
   color: hsl(0, 0%, 100%);
   box-shadow: hsl(210, 94%, 25%) 0px 1px 1px 0px;
   scale: 1.05;
   cursor: pointer;
- }
- 
- #button-read:active {
+}
+
+#button-read:active {
   background-color: hsl(210, 94%, 25%);
   color: hsl(0, 0%, 100%);
   box-shadow: hsl(210, 94%, 25%) 0px 1px 1px 0px;
   transition: 100ms;
   scale: 1;
- }
-
-
+}
 
 /* main */
 
@@ -207,7 +207,7 @@ main {
 }
 
 .card {
-  margin:0.7rem;
+  margin: 1.5rem;
   width: 20rem;
   min-height: 25rem;
   box-shadow: 0 0 1px #dfecff;
@@ -223,7 +223,6 @@ main {
   background-color: #f9fdff;
   scale: 1.02;
   transition: 0.5s;
-
 }
 
 .card-header img {
@@ -231,13 +230,13 @@ main {
   border-radius: 14px;
   width: 100%;
   height: 10rem;
-  object-fit:fill;
+  object-fit: fill;
 }
 
 .card-content {
   padding: 12px;
 }
-#news-title{
+#news-title {
   font-size: 1.2rem;
 }
 .news-source {
@@ -247,27 +246,30 @@ main {
   font-weight: 500;
 }
 
-.news-desc{
+.news-desc {
   font-size: 0.8rem;
   min-height: 7rem;
 }
 
-@media screen and (max-width:560px) {
-  
-  .flex{
-    display:grid ;
+@media screen and (max-width: 560px) {
+  .flex {
+    display: none;
+  }
+  .flex {
+    display: grid;
   }
 
-  .main-nav{
+  .main-nav {
     width: 100%;
-    justify-content:inherit;
+    justify-content: inherit;
   }
-  .nav-links{
+  .nav-links {
     display: flex !important;
     flex-direction: row;
   }
-  
+
   .search {
+    display: flex !important;
     width: auto !important;
   }
   .search_input {

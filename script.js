@@ -1,5 +1,3 @@
-
-
 const GNEWS_API_KEY = "5e03d15119b619681f013f719b916b30";
 const gnewsApiUrl = "https://gnews.io/api/v4/search";
 
@@ -47,13 +45,13 @@ function fillDataInCard(cardClone, article) {
   const newsTitle = cardClone.querySelector("#news-title");
   const newsSource = cardClone.querySelector("#news-source");
   const newsDesc = cardClone.querySelector("#news-desc");
-  const newsMore = cardClone.querySelector("#button-read")
+  const newsMore = cardClone.querySelector("#button-read");
 
-  newsImg.src = article.image || 'http://via.placeholder.com/400x200'; //USE IMAGE WHEN AVAILABLE OR USE PLACEHOLDER
+  newsImg.src = article.image || "http://via.placeholder.com/400x200"; //USE IMAGE WHEN AVAILABLE OR USE PLACEHOLDER
 
   newsTitle.textContent = article.title || "N/A";
   newsDesc.textContent = article.description || "No description available";
-  newsSource.textContent = article.source.name  || "Unknown source";
+  newsSource.textContent = article.source.name || "Unknown source";
 
   newsMore.addEventListener("click", () => {
     if (article.url) {
