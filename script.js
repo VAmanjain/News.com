@@ -1,7 +1,7 @@
 const GNEWS_API_KEY = "5e03d15119b619681f013f719b916b30";
 const gnewsApiUrl = "https://gnews.io/api/v4/search";
 
-window.addEventListener("load", () => fetchNews("Globe"));
+window.addEventListener("load", () => fetchNews("Global"));
 
 function reload() {
   window.location.reload();

@@ -220,7 +220,7 @@ main {
 
 .card {
   margin: 1.5rem;
-  width: 20rem;
+  width: 18rem;
   min-height: 25rem;
   box-shadow: 0 0 1px #dfecff;
   border-radius: 12px;
@@ -268,6 +268,10 @@ main {
 
   .nav-bar{
     display: grid;
+    width: inherit;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
   }
 
   ul{
@@ -276,12 +280,12 @@ main {
     align-items: center ;
   }
 
-  .search {
-    display: flex !important;
-    width: 100%;
-    justify-content:center;
-  }
-  .search_input {
-    width: inherit !important;
-  }
+.cards-container {
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  align-items: start;
+  margin-top: 6rem;
+}
+
 }
